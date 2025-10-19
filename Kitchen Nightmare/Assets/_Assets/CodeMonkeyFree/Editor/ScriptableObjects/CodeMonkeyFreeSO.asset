@@ -14,39 +14,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.01
   subtype: kitchenchaos
-  lastShownTimestamp: 1760260626
+  lastShownTimestamp: 1760864585
   lastUpdateResponse:
     version: 1.01
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1760266552
+  checkedLastUpdateTimestamp: 1760864585
   lastQOTDResponse:
-    questionId: 230
-    questionText: How should you store the health of each unit in your game?
-    answerA: public int health;
-    answerB: private int health;
-    answerC: public static int health;
-    answerD: private int h;
+    questionId: 232
+    questionText: What is JSON and what is it useful for?
+    answerA: JavaScript Over Node, programming pattern
+    answerB: JavaScript Object Notation, data format
+    answerC: Jumping-Signal Over Nonce, crypto concept
+    answerD: 
     answerE: 
-  lastQotdTimestamp: 1760266552
+  lastQotdTimestamp: 1760864585
   lastDynamicHeaderResponse:
-    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/humbleSep25Synty.png
-    topText: After 1 year there's a new Synty Humble Bundle! DON'T MISS IT!
-    topLink: humblebundle
-    bottomText: My 10+ Years of C# Knowledge in 1 Course!
-    bottomLink: csharpcourse
-  lastDynamicHeaderTimestamp: 1760266552
+    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/chrisZJun24_LastCall.png
+    topText: Learn how to get more WISHLISTS and Sell more COPIES of your Games!
+    topLink: howtomarketagame
+    bottomText: DONT MISS the latest important trends, sign up for my FREE Weekly
+      Newsletter!
+    bottomLink: gamedevreport
+  lastDynamicHeaderTimestamp: 1760864585
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1760266552
+  websiteLatestMessageTimestamp: 1760864585
   websiteLatestVideos:
     videos:
+    - youTubeId: Um-hDTgP0yY
+      title: TOP 10 NEW Games, Made with Unity! (SEPTEMBER 2025)
+    - youTubeId: bTQZU_CV9UY
+      title: TOP 10 FREE NEW Assets OCTOBER 2025!
     - youTubeId: 6jjwMLflLOU
       title: This AWESOME Tool MULTIPLIES all your assets!
     - youTubeId: iTpoP8M6dxg
       title: 8 QUICK Unity Tips to make BETTER Games!
-    - youTubeId: RBgFEaRn_jg
-      title: Is YouTube EASY MONEY compared to Game Dev?
-    - youTubeId: Q59s-VS684o
-      title: MASSIVE Unity Security Vulnerability! (but also nothing to worry about)
-  websiteLatestVideosTimestamp: 1760266552
+  websiteLatestVideosTimestamp: 1760864585
