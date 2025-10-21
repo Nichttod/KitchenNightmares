@@ -9,7 +9,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent
     public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterChanged;
     public class OnSelectedCounterChangedEventArgs : EventArgs
     {
-        public ClearCounter selectedCounter;
+        public BaseCounter selectedCounter;
     }
     [SerializeField] private Transform kitchenObjectHoldPoint;
     [SerializeField] private float movespeed = 7f;
@@ -17,7 +17,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent
     [SerializeField] private LayerMask countersLayerMask;
     private bool isWalking;
     private Vector3 lastInteractionsDir;
-    private ClearCounter selectedCounter;
+    private BaseCounter selectedCounter;
     private KitchenObject kitchenObject;
 
 
@@ -63,11 +63,11 @@ public class Player : MonoBehaviour, IKitchenObjectParent
         float interactDistance = 2f;
         if (Physics.Raycast(transform.position, lastInteractionsDir, out RaycastHit raycastHit, interactDistance, countersLayerMask))
         {
-            if (raycastHit.transform.TryGetComponent(out ClearCounter clearCounter))
+            if (raycastHit.transform.TryGetComponent(out BaseCounter baseCounter))
             {
-                if (clearCounter != selectedCounter)
+                if (baseCounter != selectedCounter)
                 {
-                    SetSelectedCounter(clearCounter);                
+                    SetSelectedCounter(baseCounter);                
                 }
             }
             else
@@ -79,7 +79,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent
         {
              SetSelectedCounter(null);           
         }
-                 
+              Debug.DrawRay(transform.position, lastInteractionsDir * interactDistance, Color.red);   
     }
     private void HandleMovement()
     {
@@ -129,7 +129,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent
         float rotationspeed = 10f;
         transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotationspeed);
     }
-        private void SetSelectedCounter(ClearCounter selectedCounter)
+        private void SetSelectedCounter(BaseCounter selectedCounter)
     {
         this.selectedCounter = selectedCounter;
         OnSelectedCounterChanged?.Invoke(this,new OnSelectedCounterChangedEventArgs
