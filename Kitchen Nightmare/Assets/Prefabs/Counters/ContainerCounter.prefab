@@ -55,8 +55,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4589716710238282922, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 985525831760269131}
   m_SourcePrefab: {fileID: 100100000, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
+--- !u!1 &300219118365225420 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4589716710238282922, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
+  m_PrefabInstance: {fileID: 4295137399347729766}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &985525831760269131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300219118365225420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0a9bc3944e03be4999a3fc96f24d4bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ContainerCounterVisual
+  containerCounter: {fileID: 6635792954850113525}
 --- !u!4 &300219118365225421 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4589716710238282923, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
@@ -232,6 +253,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2380527061257723883, guid: 90b3023913ff06144866ff837d113aaf, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5110887909848480582, guid: 90b3023913ff06144866ff837d113aaf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -307,15 +332,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab58a56bea73754e828a9308c5dec63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ContainerCounter
+  counterTopPoint: {fileID: 0}
   kitchenObjectSO: {fileID: 11400000, guid: 393f45a14371622449cdfb5a95b76cb2, type: 2}
-  counterTopPoint: {fileID: 9055040503028150887}
 --- !u!4 &3695038192231500255 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5110887909848480582, guid: 90b3023913ff06144866ff837d113aaf, type: 3}
-  m_PrefabInstance: {fileID: 8478849631645512345}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &9055040503028150887 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 577335472052420862, guid: 90b3023913ff06144866ff837d113aaf, type: 3}
   m_PrefabInstance: {fileID: 8478849631645512345}
   m_PrefabAsset: {fileID: 0}
