@@ -14,11 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.01
   subtype: kitchenchaos
+<<<<<<< Updated upstream
   lastShownTimestamp: 1760638421
   lastUpdateResponse:
     version: 1.01
     versionUrl: https://unitycodemonkey.com
   checkedLastUpdateTimestamp: 1760638421
+=======
+  lastShownTimestamp: 1761378939
+  lastUpdateResponse:
+    version: 1.01
+    versionUrl: https://unitycodemonkey.com
+  checkedLastUpdateTimestamp: 1761378939
+>>>>>>> Stashed changes
   lastQOTDResponse:
     questionId: 232
     questionText: What is JSON and what is it useful for?
@@ -27,7 +35,11 @@ MonoBehaviour:
     answerC: Jumping-Signal Over Nonce, crypto concept
     answerD: 
     answerE: 
+<<<<<<< Updated upstream
   lastQotdTimestamp: 1760638421
+=======
+  lastQotdTimestamp: 1761378939
+>>>>>>> Stashed changes
   lastDynamicHeaderResponse:
     topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/chrisZJun24_LastCall.png
     topText: Learn how to get more WISHLISTS and Sell more COPIES of your Games!
@@ -35,6 +47,7 @@ MonoBehaviour:
     bottomText: DONT MISS the latest important trends, sign up for my FREE Weekly
       Newsletter!
     bottomLink: gamedevreport
+<<<<<<< Updated upstream
   lastDynamicHeaderTimestamp: 1760638421
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
@@ -51,3 +64,21 @@ MonoBehaviour:
     - youTubeId: RBgFEaRn_jg
       title: Is YouTube EASY MONEY compared to Game Dev?
   websiteLatestVideosTimestamp: 1760638421
+=======
+  lastDynamicHeaderTimestamp: 1761378939
+  websiteLatestMessage:
+    text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
+      Click here!</a>
+  websiteLatestMessageTimestamp: 1761378939
+  websiteLatestVideos:
+    videos:
+    - youTubeId: wBoRaQQm9WE
+      title: TOP 10 NEW Systems and Tools OCTOBER 2025! | Unity Asset Store
+    - youTubeId: arIZP7op9WQ
+      title: My TECH Stack as a Game Developer, YouTuber and Web Dev!
+    - youTubeId: Um-hDTgP0yY
+      title: TOP 10 NEW Games, Made with Unity! (SEPTEMBER 2025)
+    - youTubeId: bTQZU_CV9UY
+      title: TOP 10 FREE NEW Assets OCTOBER 2025!
+  websiteLatestVideosTimestamp: 1761378939
+>>>>>>> Stashed changes
