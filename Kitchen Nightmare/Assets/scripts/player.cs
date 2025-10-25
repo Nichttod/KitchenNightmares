@@ -137,14 +137,30 @@ public class Player : MonoBehaviour, IKitchenObjectParent
         float rotationspeed = 10f;
         transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotationspeed);
     }
-        private void SetSelectedCounter(BaseCounter selectedCounter)
+    private void SetSelectedCounter(BaseCounter selectedCounter)
     {
-        this.selectedCounter = selectedCounter;
-        OnSelectedCounterChanged?.Invoke(this,new OnSelectedCounterChangedEventArgs
+            if (this.selectedCounter != null && this.selectedCounter is FridgeCounter oldFridge)
+            {
+                oldFridge.CloseFridgeUI();
+            }
+
+
+
+        // If the player was previously looking at a ShopCounter and now looks away, close its UI
+        if (this.selectedCounter != null && this.selectedCounter is ShopCounter oldShopCounter)
         {
-          selectedCounter = selectedCounter
+            oldShopCounter.CloseShop();
+        }
+
+        this.selectedCounter = selectedCounter;
+
+        OnSelectedCounterChanged?.Invoke(this, new OnSelectedCounterChangedEventArgs
+        {
+            selectedCounter = selectedCounter
         });
     }
+       
+
 
     public Transform GetKitchenObjectFollowTransform()
     {
