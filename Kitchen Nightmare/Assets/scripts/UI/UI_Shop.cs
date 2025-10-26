@@ -19,11 +19,11 @@ public class UI_Shop : MonoBehaviour
 
     private void Start()
     {
-        CreateItemButton(ItemShop.GetSprite(ItemShop.ItemType.Tomato), "Tomato", ItemShop.GetCost(ItemShop.ItemType.Tomato), 0);
-        CreateItemButton(ItemShop.GetSprite(ItemShop.ItemType.CheeseBlock), "CheeseBlock", ItemShop.GetCost(ItemShop.ItemType.CheeseBlock), 1);
-        CreateItemButton(ItemShop.GetSprite(ItemShop.ItemType.Cabbage), "Cabbage", ItemShop.GetCost(ItemShop.ItemType.Cabbage), 2);
-        CreateItemButton(ItemShop.GetSprite(ItemShop.ItemType.Bread), "Bread", ItemShop.GetCost(ItemShop.ItemType.Bread), 3);
-        CreateItemButton(ItemShop.GetSprite(ItemShop.ItemType.UncookedPattys), "UncookedPattys", ItemShop.GetCost(ItemShop.ItemType.UncookedPattys), 4);
+        CreateItemButton(ItemShop.GetSprite(ItemShop.ItemType.Tomato),          "Tomato", ItemShop.GetCost(ItemShop.ItemType.Tomato), 0);
+        CreateItemButton(ItemShop.GetSprite(ItemShop.ItemType.CheeseBlock),     "CheeseBlock", ItemShop.GetCost(ItemShop.ItemType.CheeseBlock), 1);
+        CreateItemButton(ItemShop.GetSprite(ItemShop.ItemType.Cabbage),         "Cabbage", ItemShop.GetCost(ItemShop.ItemType.Cabbage), 2);
+        CreateItemButton(ItemShop.GetSprite(ItemShop.ItemType.Bread),           "Bread", ItemShop.GetCost(ItemShop.ItemType.Bread), 3);
+        CreateItemButton(ItemShop.GetSprite(ItemShop.ItemType.UncookedPattys),  "UncookedPattys", ItemShop.GetCost(ItemShop.ItemType.UncookedPattys), 4);
     }
 
     private void CreateItemButton(Sprite itemSprite, string itemName, int itemCost, int positionIndex)
@@ -43,29 +43,23 @@ public class UI_Shop : MonoBehaviour
         {
             Player player = Player.Instance;
 
-                        if (!player.HasKitchenObject())
+                if (!player.HasKitchenObject())
             {
                 int itemCost = ItemShop.GetCost(GetItemTypeByName(itemName));
 
-                //  Check if player has enough money
+                
                 if (CurrencyManager.Instance.TrySpendMoney(itemCost))
-                {
-                    // Successful purchase
+                {                    
                     KitchenObjectSO kitchenObjectSO = ItemShop.GetKitchenObjectSO(GetItemTypeByName(itemName));
-                    KitchenObject.SpawnKitchenObject(kitchenObjectSO, player);
-                    Debug.Log($"Bought {itemName} for ${itemCost}");
-
-                    // Close shop
+                    KitchenObject.SpawnKitchenObject(kitchenObjectSO, player);                
+                    
                     if (currentShopCounter != null)
                     {
                         currentShopCounter.CloseShop();
                         currentShopCounter = null;
                     }
                 }
-                else
-                {
-                    Debug.Log("❌ Not enough money to buy " + itemName);
-                }
+              
             }            
         };
     }
